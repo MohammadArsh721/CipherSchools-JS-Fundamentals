@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CipherSchools - Question 19</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        button {
+            padding: 10px 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .info-box {
+            background-color: #e6f7ff;
+            border: 1px solid #cceeff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Question 19: JavaScript Fundamentals</h1>
+
+        <section>
+            <h2>1. Greeting Alert</h2>
+            <button onclick="showAlertGreeting()">Show Greeting Alert</button>
+            <div class="info-box">
+                Clicking the button will trigger a browser alert with a greeting message.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Arrow Function Sum & Console Logging</h2>
+            <p>Check your browser's console (F12 or right-click -> Inspect -> Console tab) to see the sum results and variable types.</p>
+            <button onclick="runCalculations()">Run Sum & Typeof Checks</button>
+            <div class="info-box">
+                This will execute the arrow function, log its results, and demonstrate <code>typeof</code> and the <code>window</code> object in the console.
+                You can also open the console and type JavaScript directly.
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 1. Write a script that shows a greeting using alert().
+        function showAlertGreeting() {
+            alert("Hello from CipherSchools' Question 19!");
+        }
+
+        // 2. Write a function using arrow syntax that takes two numbers and returns their sum.
+        const addTwoNumbers = (num1, num2) => {
+            return num1 + num2;
+        };
+
+        // Function to run all console logging tasks
+        function runCalculations() {
+            console.log("--- Question 19 Console Logs ---");
+
+            // 3. Use console.log() to test your function with different inputs.
+            console.log("Sum of 5 and 3:", addTwoNumbers(5, 3));        // Expected: 8
+            console.log("Sum of 10 and -2:", addTwoNumbers(10, -2));    // Expected: 8
+            console.log("Sum of 0 and 7:", addTwoNumbers(0, 7));        // Expected: 7
+
+            // 4. Try logging the type of a variable using typeof.
+            let myString = "Hello";
+            let myNumber = 123;
+            let myBoolean = true;
+            let myArray = [1, 2, 3];
+            let myObject = { name: "John" };
+            let myNull = null;
+            let myUndefined;
+            let myFunction = () => {};
+
+            console.log("Type of 'myString':", typeof myString);     // Expected: string
+            console.log("Type of 'myNumber':", typeof myNumber);     // Expected: number
+            console.log("Type of 'myBoolean':", typeof myBoolean);   // Expected: boolean
+            console.log("Type of 'myArray':", typeof myArray);       // Expected: object (Arrays are objects in JS)
+            console.log("Type of 'myObject':", typeof myObject);     // Expected: object
+            console.log("Type of 'myNull':", typeof myNull);         // Expected: object (A known historical bug in JS)
+            console.log("Type of 'myUndefined':", typeof myUndefined); // Expected: undefined
+            console.log("Type of 'myFunction':", typeof myFunction); // Expected: function
+
+            // 5. Log the window object in the browser console.
+            console.log("The global 'window' object:", window);
+
+            console.log("--- End Question 19 Console Logs ---");
+            alert("Check your browser console (F12) for sum results, variable types, and the window object!");
+        }
+
+        // Initial alert on page load (as per "Write a script that shows a greeting...")
+        // If the requirement is *only* on button click, you can remove this line.
+        // For demonstration, I'll keep it button-triggered and add a note.
+        // alert("Page loaded! Remember to click the button for more logs.");
+    </script>
+</body>
+</html>
